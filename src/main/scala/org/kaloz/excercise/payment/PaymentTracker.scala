@@ -33,7 +33,7 @@ class PaymentTracker(paymentTrackerActor: ActorRef, paymentHistoryLoaderActor: A
 }
 
 object PaymentInputExtractor {
-  val paymentInputPattern = """([A-Z]{3}) ([1-9][0-9]*\.?[0-9]*)( (?:[1-9]\d*|0)?(?:\.\d+)?)?""".r
+  val paymentInputPattern = """([A-Z]{3}) ([+-]?[1-9][0-9]*\.?[0-9]*)( (?:[1-9]\d*|0)?(?:\.\d+)?)?""".r
 
   def unapply(row: String): Option[Payment] = row match {
     case paymentInputPattern(currency, amount, exchangeRate) =>
@@ -86,7 +86,7 @@ class PaymentTrackerActor extends Actor {
   }
 
   def printPayments {
-    payments.values.foreach(payment => println(payment))
+    payments.values.filter( _.sum > 0).foreach(payment => println(payment))
   }
 
   def initializePrinter {
