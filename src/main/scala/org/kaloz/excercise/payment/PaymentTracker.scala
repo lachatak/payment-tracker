@@ -110,7 +110,7 @@ case object Load
 case class Setup(second: Int)
 
 case class PaymentSummary(currency: Currency.Value, sum: BigDecimal, exchangeRate: Option[BigDecimal]) {
-  override def toString = s"${currency} ${sum}${exchangeRate.flatMap( e => Some(" (" + sum * e + " USD)")).getOrElse("")}"
+  override def toString = s"${currency} ${sum}${exchangeRate.flatMap( e => Some(s" (${sum * e} USD)")).getOrElse("")}"
 
   def addAmount(amount: BigDecimal) = PaymentSummary(currency, amount + sum, exchangeRate)
 
