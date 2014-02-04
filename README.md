@@ -31,9 +31,9 @@ The Solution:
 - After start it reads the file and aggregate results meanwhile shows the console for user inputs.
 - Supported currencies: HUF, EUR, GBP, USD, CHF
 - Possible command:
-  ([A-Z]{3}) ([+-]?[1-9][0-9]*\.?[0-9]*)( (?:[1-9]\d*|0)?(?:\.\d+)?)? - HUF 100 12.4 - currency amount exchangeRate. Exchange rate is not mandatory. Whenever you provide it it will be a global exchange rate for the currency.
-  setup (\d*) - setup 5 - You can modify the print frequency
-  print - You can force the actor to print the current state
-  quit - quit from the app
-  ? - gives a simple use manual
+  - ([A-Z]{3}) ([+-]?[1-9][0-9]*\.?[0-9]*)( (?:[1-9]\d*|0)?(?:\.\d+)?)? - HUF 100 12.4 - currency amount exchangeRate. Exchange rate is not mandatory. Whenever you provide it it will be a global exchange rate for the currency.
+  - setup (\d*) - setup 5 - You can modify the print frequency
+  - print - You can force the actor to print the current state
+  - quit - quit from the app
+  - ? - gives a simple use manual
 
