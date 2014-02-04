@@ -3,15 +3,21 @@ Payment Tracker
 Write a program that keeps a record of payments.  Initially, the application should load the following data from a file:
 
 USD 1000
+
 HKD 100
+
 USD -100
+
 RMB 2000
+
 HKD 200
 
 Once started it should read additional lines from the console. The program should output a grand total of the payments by currency once a minute, e.g.
 
 USD 900
+
 RMB 2000
+
 HKD 300
 
 Detailed Requirements
@@ -23,7 +29,9 @@ You may need to make some assumptions. For example, if the user enters invalid i
 Optional Bonus Question Allow each currency to have the exchange rate compared to USD configured. When you display the output, write the USD equivalent amount next to it, for example:
 
 USD 900
+
 RMB 2000 (USD 314.60)
+
 HKD 300 (USD 38.62)
 
 The Solution:
